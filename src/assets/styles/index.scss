@@ -1,0 +1,17 @@
+@import "./common";
+html,
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: $fontsize-normal;
+  text-align: left;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  color: $color-font;
+}
