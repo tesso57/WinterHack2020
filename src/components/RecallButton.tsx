@@ -1,10 +1,11 @@
 import React from "react";
+import "../assets/styles/RecallButton.scss"
 
 type Props = {
-
+    
 }
 
-const Hero = (props: Props) => {
+const RecallButton = (props: Props) => {
     return(
         <>
             <h1>Hello</h1>
@@ -12,4 +13,4 @@ const Hero = (props: Props) => {
     )
 }
 
-export default Hero;
+export default RecallButton;
