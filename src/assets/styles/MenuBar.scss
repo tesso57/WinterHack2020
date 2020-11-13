@@ -1,0 +1,41 @@
+@import "./common";
+
+ul
+li {
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    padding-left: 0;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li{
+    padding: 0 50px;
+    float: left;
+}
+
+nav {
+    z-index: 1;
+    font-family: "Cormorant Garamond", serif;
+    padding: 10px;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+ul {
+	list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+li {
+	padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+  
