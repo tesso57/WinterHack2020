@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/hero.scss"
+import "../assets/styles/Hero.scss"
 
 type Props = {
     text: string,
