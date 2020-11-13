@@ -16,26 +16,37 @@ ul{
 li{
     padding: 0 50px;
     float: left;
+    width:17%;
+    text-align: center;
 }
 
 nav {
     z-index: 1;
-    font-family: "Cormorant Garamond", serif;
     padding: 10px;
 }
 ul {
 	list-style-type: none;
-	padding-left: 0;
-}
-ul {
-	list-style-type: none;
     padding-left: 0;
-    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-top: auto;
 }
-li {
-	padding: 10px;
-    margin: 10px;
-    display: inline-block;
+
+nav{
+    background:#fff;
+    box-shadow:0 2px 8px rgba(30,30,80,.3);
+    left:0;
+    line-height:1;
+    position:fixed;
+    top:0;
+    height: 2%;
+    width:100%;
+    z-index:100;
+    text-align:center;
 }
 
   

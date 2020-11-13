@@ -6,10 +6,10 @@ const MenuBar = () => {
     return(
         <>
         <nav>
-            <ul className="ul">
-                <li><MenuItem url={""} text={"自己紹介"}/></li>
-                <li><MenuItem url={""} text={"話題"}/></li>
-                <li className=""><MenuItem url={""} text={"順番"}/></li>
+            <ul>
+                <li><MenuItem url={"#template"} text={"自己紹介テンプレート"}/></li>
+                <li><MenuItem url={"#wadai"} text={"話題ガチャ"}/></li>
+                <li><MenuItem url={"#junban"} text={"順番決めツール"}/></li>
             </ul>
         </nav>
         </>
