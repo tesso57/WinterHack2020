@@ -1,5 +1,10 @@
 {
-"introduces" : [
-{"content":"趣味","type":"formal"}
-]
+  "introductionTemplate": {
+    "introductions": [
+      {
+        "content": "趣味",
+        "type": "formal"
+      }
+    ]
+  }
 }
