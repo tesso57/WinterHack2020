@@ -19,7 +19,7 @@ exports.addTopicSet = functions.https.onRequest(async (req: any, res: any) => {
         const dataset = req.body;
         for (const key of Object.keys(dataset)){
             const data = dataset[key];
-            await db.collection('topicSet').doc(key).set(data)
+            await db.collection('topics').doc(key).set(data)
         }
         sendResponse(res,200,{message: 'Successfully added dataset!'})
     }
@@ -32,7 +32,7 @@ exports.addOrderSet = functions.https.onRequest(async (req: any, res: any) => {
         const dataset = req.body;
         for (const key of Object.keys(dataset)){
             const data = dataset[key];
-            await db.collection('orderSet').doc(key).set(data)
+            await db.collection('order').doc(key).set(data)
         }
         sendResponse(res,200,{message: 'Successfully added dataset!'})
     }
@@ -45,7 +45,7 @@ exports.addIntroduceTemplateSet = functions.https.onRequest(async (req: any, res
         const dataset = req.body;
         for (const key of Object.keys(dataset)){
             const data = dataset[key];
-            await db.collection('introduceTemplateSet').doc(key).set(data)
+            await db.collection('introductions').doc(key).set(data)
         }
         sendResponse(res,200,{message: 'Successfully added dataset!'})
     }
