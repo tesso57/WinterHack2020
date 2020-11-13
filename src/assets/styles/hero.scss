@@ -1,5 +1,13 @@
 @import "common";
 
-h1 {
+div.bigger{
   color: $color-primary;
+  text-decoration: underline;
+  font-size: $fontsize-hero;
+}
+
+div.normal{
+  color: $color-primary;
+  text-decoration: underline;
+  font-size: $fontsize-Display2;
 }
