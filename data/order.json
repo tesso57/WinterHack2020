@@ -1,0 +1,13 @@
+{
+"order" : [
+{"content":"誕生日が早い人順","type":"formal"},
+{"content":"名前順","type":"formal"},
+{"content":"誕生日が近い人順","type":"formal"},
+{"content":"下の名前順","type":"formal"},
+{"content":"アルファベット順","type":"informal"},
+{"content":"下の名前のアルファベット順","type":"informal"},
+{"content":"寝たのが早かった順","type":"informal"},
+{"content":"おきたのが早かった順","type":"informal"},
+{"content":"財布に現金を多く持っている人順","type":"informal"}
+]
+}
