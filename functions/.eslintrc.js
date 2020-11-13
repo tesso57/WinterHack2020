@@ -5,6 +5,8 @@ module.exports = {
     node: true,
   },
   extends: [
+    "react-app/jest",
+    "react-app",
     "plugin:import/errors",
     "plugin:import/warnings",
   ],
