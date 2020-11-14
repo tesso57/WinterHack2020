@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import RecallButton from './components/RecallButton';
 import MenuBar from './components/MenuBar';
 import "./assets/styles/App.scss"
+import SearchButton from './components/SearchButton';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </div>
         <RecallButton/>
         <MenuBar/>
+        <SearchButton search={"猫"} text={"具体例を検索!"}/>
     </>
   );
 }
