@@ -2,7 +2,6 @@ import React from "react";
 import "../assets/styles/RecallButton.scss"
 
 type Props = {
-    uid: number
     dataName: string
     handleRecall: () => void
 }

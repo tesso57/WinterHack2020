@@ -43,12 +43,12 @@ function App() {
                     <div id="wadai">
                         <Hero text={"話題ガチャ"} bigger={true}/>
                         <ThemeComponent heading={"話題"} isInit={true}
-                                        content={currentData[2]} dataName={'topics'} uid={2} data={dataset['topics']}/>
+                                        content={currentData[2]} dataName={'topics'}  data={dataset['topics']}/>
                     </div>
                     <div id="junban">
                         <Hero text={"順番決め"} bigger={true}/>
                         <ThemeComponent heading={"順序"} isInit={true}
-                                        content={currentData[2]} dataName={'order'} uid={2} data={dataset['order']}/>
+                                        content={currentData[2]} dataName={'order'}  data={dataset['order']}/>
                     </div>
                 </>
             )}

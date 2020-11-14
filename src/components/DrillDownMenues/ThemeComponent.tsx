@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../../assets/styles/DrillDownMenu.scss"
 import Text from "../Text"
 import SearchButton from "../SearchButton";
@@ -7,7 +7,6 @@ import RecallButton from "../RecallButton";
 type Props = {
     heading: string,
     content: string,
-    uid: number
     isInit: boolean
     dataName: string
     data: { content: string, type: string }[]
@@ -31,9 +30,8 @@ const ThemeComponent = (props: Props) => {
             {isOpen &&
             <div className={"content"}>
                 <Text text={currentData}/>
-                <SearchButton text={"検索"} search={props.heading}/>
-                <RecallButton dataName={props.dataName} uid={props.uid}
-                              handleRecall={() => setRecall(!recall)}/>
+                <SearchButton text={"検索"} search={currentData}/>
+                <RecallButton dataName={props.dataName} handleRecall={() => setRecall(!recall)}/>
             </div>
             }
         </div>
