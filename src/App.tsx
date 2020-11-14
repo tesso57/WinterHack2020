@@ -3,12 +3,14 @@ import Hero from './components/Hero';
 import RecallButton from './components/RecallButton';
 import MenuBar from './components/MenuBar';
 import "./assets/styles/App.scss"
+import DrillDownMenu from "./components/DrillDownMenu";
 
 function App() {
   return (
     <>
-        <div className="space"></div>
+        <div className="space"/>
         <Hero text={"タイトル"} bigger={true} />
+        <DrillDownMenu/>
         <div id="template">
           <Hero text={"自己紹介テンプレート"} bigger={true} />
         </div>
