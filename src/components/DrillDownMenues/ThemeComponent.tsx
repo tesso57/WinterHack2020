@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "../../assets/styles/DrillDownMenu.scss"
-
+import Text from "../Text"
+import SearchButton from "../SearchButton";
+import RecallButton from "../RecallButton";
 type Props = {
     heading: string,
     isInit: boolean,
@@ -20,6 +22,9 @@ const ThemeComponent = (props: Props) => {
             </div>
             {isOpen &&
             <div className={"content"}>
+                <Text text={props.heading}/>
+                <SearchButton text={"検索"} search={props.heading}/>
+                <RecallButton/>
             </div>
             }
         </div>

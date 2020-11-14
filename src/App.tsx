@@ -1,9 +1,6 @@
 import React from 'react';
 import Hero from './components/Hero';
-import RecallButton from './components/RecallButton';
 import MenuBar from './components/MenuBar';
-import Text from './components/Text';
-import SearchButton from './components/SearchButton';
 import "./assets/styles/App.scss"
 import ThemeComponent from "./components/DrillDownMenues/ThemeComponent";
 import IntroductionTemplate from "./components/DrillDownMenues/IntroductionTemplate";
@@ -26,7 +23,6 @@ function App() {
                 <Hero text={"順番決め"} bigger={true}/>
                 <ThemeComponent heading={"順番"} isInit={true}/>
             </div>
-            <RecallButton/>
             <MenuBar/>
         </>
     );
