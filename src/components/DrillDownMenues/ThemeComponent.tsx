@@ -17,9 +17,13 @@ const ThemeComponent = (props: Props) => {
     const [recall, setRecall] = useState(false)
     useEffect(() => {
         if (props.data !== undefined) {
-            setCurrentData(props.data[Math.floor(Math.random() * props.data.length)]['content'])
+            let preData = props.data[Math.floor(Math.random() * props.data.length)]['content']
+            while (preData === currentData) {
+                preData = props.data[Math.floor(Math.random() * props.data.length)]['content']
+            }
+            setCurrentData(preData)
         }
-    }, [recall,props.data])
+    }, [recall, props.data])
 
     return (
         <div>
@@ -30,7 +34,7 @@ const ThemeComponent = (props: Props) => {
             <div className={"content"}>
                 <Text text={currentData}/>
                 <SearchButton text={"検索"} search={currentData}/>
-                <RecallButton  handleRecall={() => setRecall(!recall)}/>
+                <RecallButton handleRecall={() => setRecall(!recall)}/>
             </div>
             }
         </div>
