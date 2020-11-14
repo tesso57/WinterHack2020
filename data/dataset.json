@@ -4,6 +4,12 @@
       {
         "content": "趣味",
         "type": "formal"
+      },{
+        "content": "好きな歌手",
+        "type": "formal"
+      },{
+        "content": "休日のすごし方",
+        "type": "formal"
       }
     ],
     "order": [

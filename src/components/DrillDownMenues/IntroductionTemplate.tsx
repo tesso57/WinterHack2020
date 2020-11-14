@@ -31,8 +31,11 @@ const IntroductionTemplate = (props: Props) => {
             </div>
             {isOpen &&
             <div className={"content"}>
+                <p>名前</p>
+                <p>所属</p>
                 <p>{currentData[0]}</p>
                 <p>{currentData[1]}</p>
+                <p>よろしくお願いします！</p>
                 <RecallButton handleRecall={() => setRecall(!recall)}/>
             </div>
             }
