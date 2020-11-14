@@ -1,31 +1,72 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Hero from './components/Hero';
-import RecallButton from './components/RecallButton';
 import MenuBar from './components/MenuBar';
-import Text from './components/Text';
-import SearchButton from './components/SearchButton';
 import "./assets/styles/App.scss"
+import ThemeComponent from "./components/DrillDownMenues/ThemeComponent";
+import IntroductionTemplate from "./components/DrillDownMenues/IntroductionTemplate";
+import {db} from "./firebase"
 
 function App() {
-  return (
-    <>
-        <div className="space"></div>
-        <Hero text={"タイトル"} bigger={true} />
-        <div id="template">
-          <Hero text={"自己紹介テンプレート"} bigger={true} />
-        </div>
-        <div id="wadai">
-          <Hero text={"話題ガチャ"} bigger={true} />
-        </div>
-        <div id="junban">
-          <Hero text={"順番決め"} bigger={true} />
-        </div>
-        <RecallButton/>
-        <MenuBar/>
-        <SearchButton search={"猫"} text={"具体例を検索!"}/>
-        <Text text={"話題"}/>
-    </>
-  );
+    const [dataset, setDataset] = useState({});
+    const [currentData, setCurrentData] = useState(["", "", "", ""])
+    useEffect(() => {
+        (async () => {
+            const initDataset = {}
+            await db.collection('datasets').get().then(snapshots => {
+                snapshots.forEach(doc => {
+                    const id = doc.id;
+                    initDataset[id] = doc.data();
+                })
+            })
+            setDataset(initDataset['data'])
+            setCurrentData([
+                initDataset['data']['introductions'][Math.floor(Math.random() * initDataset['data']['introductions'].length)]['content'],
+                initDataset['data']['introductions'][Math.floor(Math.random() * initDataset['data']['introductions'].length)]['content'],
+                initDataset['data']['topics'][Math.floor(Math.random() * initDataset['data']['topics'].length)]['content'],
+                initDataset['data']['order'][Math.floor(Math.random() * initDataset['data']['order'].length)]['content']
+            ])
+        })()
+    }, [])
+    return (
+        <>
+            <div className="space"/>
+            <Hero text={"タイトル"} bigger={true}/>
+            {(Object.keys(dataset).length === 0) ? (
+                <h1>ローディング</h1>
+            ) : (
+                <>
+                    <div id="template">
+                        <Hero text={"自己紹介テンプレート"} bigger={true}/>
+                        <IntroductionTemplate
+                            heading={"自己紹介テンプレート"}
+                            isInit={true}
+                            content={[currentData[0], currentData[1]]}
+                            data={dataset['introductions']}/>
+                        {/*<IntroductionTemplate heading={"長い"} isInit={false} subHeading={"(1分以上)"}/>*/}
+                    </div>
+                    <div id="wadai">
+                        <Hero text={"話題ガチャ"} bigger={true}/>
+                        <ThemeComponent
+                            heading={"話題"}
+                            isInit={true}
+                            content={currentData[2]}
+                            data={dataset['topics']}
+                        />
+                    </div>
+                    <div id="junban">
+                        <Hero text={"順番決め"} bigger={true}/>
+                        <ThemeComponent
+                            heading={"順序"}
+                            isInit={true}
+                            content={currentData[2]}
+                            data={dataset['order']}
+                        />
+                    </div>
+                </>
+            )}
+            <MenuBar/>
+        </>
+    );
 }
 
 export default App;

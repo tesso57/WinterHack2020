@@ -1,0 +1,100 @@
+{
+  "data": {
+    "introductions": [
+      {
+        "content": "趣味",
+        "type": "formal"
+      },{
+        "content": "好きな歌手",
+        "type": "formal"
+      },{
+        "content": "休日のすごし方",
+        "type": "formal"
+      }
+    ],
+    "order": [
+      {
+        "content": "誕生日が早い人順",
+        "type": "formal"
+      },
+      {
+        "content": "名前順",
+        "type": "formal"
+      },
+      {
+        "content": "誕生日が近い人順",
+        "type": "formal"
+      },
+      {
+        "content": "下の名前順",
+        "type": "formal"
+      },
+      {
+        "content": "アルファベット順",
+        "type": "informal"
+      },
+      {
+        "content": "下の名前のアルファベット順",
+        "type": "informal"
+      },
+      {
+        "content": "寝たのが早かった順",
+        "type": "informal"
+      },
+      {
+        "content": "おきたのが早かった順",
+        "type": "informal"
+      },
+      {
+        "content": "財布に現金を多く持っている人順",
+        "type": "informal"
+      }
+    ],
+    "topics": [
+      {
+        "content": "映画",
+        "type": "informal"
+      },
+      {
+        "content": "ゲーム",
+        "type": "informal"
+      },
+      {
+        "content": "漫画",
+        "type": "informal"
+      },
+      {
+        "content": "アニメ",
+        "type": "informal"
+      },
+      {
+        "content": "お笑い",
+        "type": "informal"
+      },
+      {
+        "content": "出身地",
+        "type": "formal"
+      },
+      {
+        "content": "将来の夢",
+        "type": "formal"
+      },
+      {
+        "content": "子供のころになりたかったもの",
+        "type": "informal"
+      },
+      {
+        "content": "好きな場所",
+        "type": "formal"
+      },
+      {
+        "content": "趣味",
+        "type": "formal"
+      },
+      {
+        "content": "スポーツ",
+        "type": "formal"
+      }
+    ]
+  }
+}

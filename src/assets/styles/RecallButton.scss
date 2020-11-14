@@ -1,20 +1,29 @@
 @import "common";
 
-.RecallButton{
-    width: 90px;
-    height:50px;
-    background-color: $color-font;
-    color: $color-background;
-    border-radius: 10px/10px;
-    border-style: none;
-    outline: none;
+.RecallButton {
+  width: 90px;
+  height: 50px;
+  background-color: $color-font;
+  color: $color-background;
+  border-radius: 10px/10px;
+  border-style: none;
+  outline: none;
+
+  position: absolute;
+  top: 95%;
+  left: 95%;
+  -webkit-transform: translate(-100%, -100%) rotate(0.5turn);
+  transform: translate(-100%, -100%) ;
 }
-.RecallButton:hover{
-    cursor: pointer;
-    opacity: 0.7;
+
+.RecallButton:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
-svg{
-    width: 30px;
-    height: 30px;
-    fill: #f5f5f5;
+
+svg {
+  width: 30px;
+  height: 30px;
+  fill: #f5f5f5;
+  transform: rotate(0.35turn);
 }
