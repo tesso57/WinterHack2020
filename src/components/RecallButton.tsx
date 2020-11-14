@@ -2,18 +2,20 @@ import React from "react";
 import "../assets/styles/RecallButton.scss"
 
 type Props = {
-    uid :number
-    dataName:string
-    handleRecall:any
+    uid: number
+    dataName: string
+    handleRecall: () => void
 }
 
 const RecallButton = (props: Props) => {
-    return(
+    return (
         <div>
             <button className="RecallButton" onClick={props.handleRecall}>
-                <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xmlSpace="preserve">
-                <g>
-                    <path className="icon" d="M446.025,92.206c-40.762-42.394-97.487-69.642-160.383-72.182c-15.791-0.638-29.114,11.648-29.752,27.433
+                <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+                     xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                     xmlSpace="preserve">
+                    <g>
+                        <path className="icon" d="M446.025,92.206c-40.762-42.394-97.487-69.642-160.383-72.182c-15.791-0.638-29.114,11.648-29.752,27.433
                         c-0.638,15.791,11.648,29.114,27.426,29.76c47.715,1.943,90.45,22.481,121.479,54.681c30.987,32.235,49.956,75.765,49.971,124.011
                         c-0.015,49.481-19.977,94.011-52.383,126.474c-32.462,32.413-76.999,52.368-126.472,52.382
                         c-49.474-0.015-94.025-19.97-126.474-52.382c-32.405-32.463-52.368-76.992-52.382-126.474c0-3.483,0.106-6.938,0.302-10.364
@@ -23,7 +25,7 @@ const RecallButton = (props: Props) => {
                         c-0.014,65.102,26.475,124.31,69.153,166.944C151.607,465.525,210.8,492.013,275.91,492
                         c65.095,0.014,124.302-26.475,166.937-69.146c42.678-42.635,69.167-101.842,69.154-166.944
                         C512.014,192.446,486.844,134.565,446.025,92.206z"></path>
-                </g>
+                    </g>
                 </svg>
             </button>
         </div>

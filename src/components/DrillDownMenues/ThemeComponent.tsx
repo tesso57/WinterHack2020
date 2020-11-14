@@ -10,7 +10,7 @@ type Props = {
     uid: number
     isInit: boolean
     dataName: string
-    data: any
+    data: { content: string, type: string }[]
 }
 
 const ThemeComponent = (props: Props) => {
