@@ -10,13 +10,13 @@ const Hero = (props: Props) => {
     if(props.bigger){
         return(
             <>
-                <div className="bigger">{props.text}</div>
+                <div className="bigger common">{props.text}</div>
             </>
         )
     }
     return(
         <>
-            <div className="normal">{props.text}</div>
+            <div className="normal common">{props.text}</div>
         </>
     )
 }

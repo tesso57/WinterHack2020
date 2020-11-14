@@ -1,15 +1,20 @@
 @import "common";
 
 div.bigger{
-  color: $color-primary;
-  text-decoration: underline;
   font-size: $fontsize-hero;
-  text-align: center;
+  font-weight: bold;
 }
 
 div.normal{
+  font-size: $fontsize-Display2;
+  font-weight: bold;
+}
+
+.common {
   color: $color-primary;
   text-decoration: underline;
-  font-size: $fontsize-Display2;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
+

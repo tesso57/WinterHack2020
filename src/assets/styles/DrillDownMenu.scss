@@ -1,9 +1,9 @@
 @import "common";
 
 .heading {
-  background: $color-primary;
+  background: $color-secondary;
   color: $color-font-white;
-  font-size: $fontsize-Display2;
+  font-size: $fontsize-Display1;
   text-align: center;
 
   width: 70%;
@@ -11,6 +11,8 @@
 
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   cursor: pointer;
   position: relative;
 
@@ -31,7 +33,7 @@
 .content {
   display: block;
   position: relative;
-
+  font-weight: bold;
   background: $color-secondary2;
 
   width: 70%;
@@ -40,16 +42,17 @@
   margin-left: auto;
   margin-right: auto;
 
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 80px;
 }
 
 .item {
-  font-size: $fontsize-Display1;
+  font-weight: normal;
+  font-size: $fontsize-Heading;
   color: $color-font;
   background: $color-background;
   border-radius: 10px/10px;
-  border-color: $color-primary;
+  border-color: $color-secondary;
   border-style: solid;
   border-width: 5px;
   width: 50%;
@@ -62,7 +65,7 @@
 .bar {
   position: absolute;
   width: 20px;
-  height: 450px;
+  height: 400px;
   background: #000;
   top: 50px;
   left: 50%;
