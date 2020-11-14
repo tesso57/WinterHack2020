@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import "../../assets/styles/DrillDownMenu.scss"
 import Text from "../Text"
 import SearchButton from "../SearchButton";
@@ -7,24 +7,33 @@ import RecallButton from "../RecallButton";
 type Props = {
     heading: string,
     content: string,
-    getRandomData: (data: { content: string, type: string }[]) => string,
-    isOpen: boolean,
-    setOpen: (num: number) => void,
-    uid : number
+    uid: number
+    isInit: boolean
+    dataName: string
+    data: any
 }
 
 const ThemeComponent = (props: Props) => {
+    const [isOpen, setIsOpen] = useState(props.isInit);
+    const [currentData, setCurrentData] = useState(props.content)
+    const [recall, setRecall] = useState(false)
+    useEffect(() => {
+        if (props.data !== undefined) {
+            setCurrentData(props.data[Math.floor(Math.random() * props.data.length)]['content'])
+        }
+    }, [recall])
 
     return (
         <div>
-            <div className={"heading"} onClick={() => props.setOpen(props.uid)}>
+            <div onClick={() => setIsOpen(!isOpen)} className={"heading"}>
                 {props.heading}
             </div>
-            {props.isOpen &&
+            {isOpen &&
             <div className={"content"}>
-                <Text text={props.content}/>
+                <Text text={currentData}/>
                 <SearchButton text={"検索"} search={props.heading}/>
-                <RecallButton/>
+                <RecallButton dataName={props.dataName} uid={props.uid}
+                              handleRecall={() => setRecall(!recall)}/>
             </div>
             }
         </div>

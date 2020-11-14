@@ -2,12 +2,15 @@ import React from "react";
 import "../assets/styles/RecallButton.scss"
 
 type Props = {
+    uid :number
+    dataName:string
+    handleRecall:any
 }
 
 const RecallButton = (props: Props) => {
     return(
         <div>
-            <button className="RecallButton">
+            <button className="RecallButton" onClick={props.handleRecall}>
                 <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xmlSpace="preserve">
                 <g>
                     <path className="icon" d="M446.025,92.206c-40.762-42.394-97.487-69.642-160.383-72.182c-15.791-0.638-29.114,11.648-29.752,27.433
