@@ -37,18 +37,30 @@ function App() {
                 <>
                     <div id="template">
                         <Hero text={"自己紹介テンプレート"} bigger={true}/>
-                        <IntroductionTemplate heading={"短い"} isInit={false} subHeading={"(1分以内)"}/>
-                        <IntroductionTemplate heading={"長い"} isInit={false} subHeading={"(1分以上)"}/>
+                        <IntroductionTemplate
+                            heading={"自己紹介テンプレート"}
+                            isInit={true}
+                            content={[currentData[0], currentData[1]]}
+                            data={dataset['introductions']}/>
+                        {/*<IntroductionTemplate heading={"長い"} isInit={false} subHeading={"(1分以上)"}/>*/}
                     </div>
                     <div id="wadai">
                         <Hero text={"話題ガチャ"} bigger={true}/>
-                        <ThemeComponent heading={"話題"} isInit={true}
-                                        content={currentData[2]} dataName={'topics'}  data={dataset['topics']}/>
+                        <ThemeComponent
+                            heading={"話題"}
+                            isInit={true}
+                            content={currentData[2]}
+                            data={dataset['topics']}
+                        />
                     </div>
                     <div id="junban">
                         <Hero text={"順番決め"} bigger={true}/>
-                        <ThemeComponent heading={"順序"} isInit={true}
-                                        content={currentData[2]} dataName={'order'}  data={dataset['order']}/>
+                        <ThemeComponent
+                            heading={"順序"}
+                            isInit={true}
+                            content={currentData[2]}
+                            data={dataset['order']}
+                        />
                     </div>
                 </>
             )}

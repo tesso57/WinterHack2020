@@ -8,7 +8,6 @@ type Props = {
     heading: string,
     content: string,
     isInit: boolean
-    dataName: string
     data: { content: string, type: string }[]
 }
 
@@ -31,7 +30,7 @@ const ThemeComponent = (props: Props) => {
             <div className={"content"}>
                 <Text text={currentData}/>
                 <SearchButton text={"検索"} search={currentData}/>
-                <RecallButton dataName={props.dataName} handleRecall={() => setRecall(!recall)}/>
+                <RecallButton  handleRecall={() => setRecall(!recall)}/>
             </div>
             }
         </div>
