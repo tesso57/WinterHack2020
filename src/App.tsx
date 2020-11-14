@@ -12,10 +12,10 @@ function App() {
     useEffect(() => {
         (async () => {
             const initDataset: { [key: string]: { content: string, type: string }[] } = {}
-            await db.collection(name).get().then(snapshots => {
+            await db.collection('datasets').get().then(snapshots => {
                 snapshots.forEach(doc => {
-                    const id = doc.id
-                    initDataset[id] = doc.data() as { content: string, type: string }[]
+                    const id = doc.id;
+                    initDataset[id] = doc.data() as { content: string, type: string }[];
                 })
             })
             setDataset(initDataset)

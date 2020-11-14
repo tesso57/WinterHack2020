@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useEffect} from 'react'
+import React, {useState} from 'react'
 import "../../assets/styles/DrillDownMenu.scss"
 
 
@@ -9,11 +9,7 @@ type Props = {
 }
 
 const IntroductionTemplate = (props: Props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    //マウント時に実行
-    useEffect(() => {
-        setIsOpen(props.isInit)
-    }, [])
+    const [isOpen, setIsOpen] = useState(props.isInit);
 
     return (
         <div>
