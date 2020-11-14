@@ -1,15 +1,36 @@
 @import "common";
 
-div.bigger{
-  color: $color-primary;
-  text-decoration: underline;
+div.bigger {
   font-size: $fontsize-hero;
-  text-align: center;
+  font-weight: bold;
 }
 
-div.normal{
-  color: $color-primary;
-  text-decoration: underline;
+div.normal {
   font-size: $fontsize-Display2;
-  text-align: center;
+  font-weight: bold;
 }
+
+.common {
+  font-family: $font-primary;
+  color: $color-primary;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.common:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  display: inline-block;
+  width: 110%;
+  height: 8px;
+  transform: translateX(-50%);
+  background-color: $color-primary;
+  border-radius: 2px;
+}
+

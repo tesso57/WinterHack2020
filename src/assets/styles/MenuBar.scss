@@ -1,51 +1,41 @@
 @import "./common";
 
-ul
-li {
-    list-style: none;
-}
-
-ul{
-    display: flex;
-    padding-left: 0;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-li{
-    padding: 0 50px;
-    float: left;
-    width:17%;
-    text-align: center;
-    white-space: nowrap;
-}
-
 ul {
-	list-style-type: none;
-    padding-left: 0;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    margin-top: 0;
-    white-space: nowrap;
-    min-width: 1100px;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
-nav{
-    padding: 0;
-    background:#fff;
-    box-shadow:0 2px 8px rgba(30,30,80,.3);
-    line-height:1;
-    position:fixed;
-    top:0;
-    height: 70px;
-    width:100%;
-    z-index:100;
-    text-align:center;
+nav {
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(30, 30, 80, .3);
+  line-height: 70px;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  min-width: 870px;
+  z-index: 100;
+  text-align: center;
+
+  font-family: $font-primary;
 }
 
-  
+
+.icon {
+  width: 60px;
+  height: auto;
+  margin-top: 5px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: $fontsize-Heading;
+  color: $color-primary;
+  height: 60px;
+}

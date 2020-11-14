@@ -19,12 +19,22 @@ const IntroductionTemplate = (props: Props) => {
 
     useEffect(() => {
         if (props.data !== undefined) {
-            setCurrentData([
+            let preData = [
                 props.data[Math.floor(Math.random() * props.data.length)]['content'],
                 props.data[Math.floor(Math.random() * props.data.length)]['content']
-            ])
+            ]
+            //引き直し
+            while (preData[0] === preData[1] || (preData[0] === currentData[0] && preData[1] === currentData[1])) {
+                preData = [
+                    props.data[Math.floor(Math.random() * props.data.length)]['content'],
+                    props.data[Math.floor(Math.random() * props.data.length)]['content']
+                ]
+            }
+            console.log(preData)
+            setCurrentData(preData)
         }
-    }, [recall,props.data])
+        // eslint-disable-next-line
+    }, [recall, props.data])
 
     return (
         <div>

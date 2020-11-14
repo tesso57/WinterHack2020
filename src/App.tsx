@@ -5,6 +5,7 @@ import "./assets/styles/App.scss"
 import ThemeComponent from "./components/DrillDownMenues/ThemeComponent";
 import IntroductionTemplate from "./components/DrillDownMenues/IntroductionTemplate";
 import {db} from "./firebase"
+import template_kun from "./assets/img/template_kun.jpg"
 
 function App() {
     const [dataset, setDataset] = useState({});
@@ -30,22 +31,25 @@ function App() {
     return (
         <>
             <div className="space"/>
-            <Hero text={"タイトル"} bigger={true}/>
+            <MenuBar/>
             {(Object.keys(dataset).length === 0) ? (
-                <h1>ローディング</h1>
+                <>
+                    <h2>Now Loading...</h2>
+                    <img src={template_kun} alt={"テンプレートくん"} className={"img"}/>
+                </>
             ) : (
                 <>
+                    <Hero text={"テンプレくん"} bigger={true}/>
                     <div id="template">
-                        <Hero text={"自己紹介テンプレート"} bigger={true}/>
+                        <Hero text={"自己紹介テンプレート"} bigger={false}/>
                         <IntroductionTemplate
-                            heading={"自己紹介テンプレート"}
+                            heading={"流れ"}
                             isInit={true}
                             content={[currentData[0], currentData[1]]}
                             data={dataset['introductions']}/>
-                        {/*<IntroductionTemplate heading={"長い"} isInit={false} subHeading={"(1分以上)"}/>*/}
                     </div>
                     <div id="wadai">
-                        <Hero text={"話題ガチャ"} bigger={true}/>
+                        <Hero text={"話題ガチャ"} bigger={false}/>
                         <ThemeComponent
                             heading={"話題"}
                             isInit={true}
@@ -53,8 +57,8 @@ function App() {
                             data={dataset['topics']}
                         />
                     </div>
-                    <div id="junban">
-                        <Hero text={"順番決め"} bigger={true}/>
+                    <div id="junban" className={"last"}>
+                        <Hero text={"順番決め"} bigger={false}/>
                         <ThemeComponent
                             heading={"順序"}
                             isInit={true}
@@ -64,7 +68,6 @@ function App() {
                     </div>
                 </>
             )}
-            <MenuBar/>
         </>
     );
 }

@@ -17,9 +17,14 @@ const ThemeComponent = (props: Props) => {
     const [recall, setRecall] = useState(false)
     useEffect(() => {
         if (props.data !== undefined) {
-            setCurrentData(props.data[Math.floor(Math.random() * props.data.length)]['content'])
+            let nextData = props.data[Math.floor(Math.random() * props.data.length)]['content']
+            while (nextData === currentData) {
+                nextData = props.data[Math.floor(Math.random() * props.data.length)]['content']
+            }
+            setCurrentData(nextData)
         }
-    }, [recall,props.data])
+        // eslint-disable-next-line
+    }, [recall, props.data])
 
     return (
         <div>
@@ -30,7 +35,7 @@ const ThemeComponent = (props: Props) => {
             <div className={"content"}>
                 <Text text={currentData}/>
                 <SearchButton text={"検索"} search={currentData}/>
-                <RecallButton  handleRecall={() => setRecall(!recall)}/>
+                <RecallButton handleRecall={() => setRecall(!recall)}/>
             </div>
             }
         </div>
