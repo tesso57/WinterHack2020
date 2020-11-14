@@ -45,3 +45,18 @@
   padding-bottom: 80px;
 }
 
+.item {
+  font-size: $fontsize-Display1;
+  color: $color-font;
+  background: $color-background;
+  border-radius: 10px/10px;
+  border-color: $color-primary;
+  border-style: solid;
+  border-width: 5px;
+  width: 50%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+}
