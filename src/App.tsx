@@ -56,7 +56,7 @@ function App() {
                             data={dataset['topics']}
                         />
                     </div>
-                    <div id="junban">
+                    <div id="junban" className={"last"}>
                         <Hero text={"順番決め"} bigger={false}/>
                         <ThemeComponent
                             heading={"順序"}

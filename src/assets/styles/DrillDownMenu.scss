@@ -16,6 +16,7 @@
   cursor: pointer;
   position: relative;
 
+  user-select: none;
 }
 
 .subHeading {
@@ -44,6 +45,8 @@
 
   padding-top: 50px;
   padding-bottom: 80px;
+
+  user-select: none;
 }
 
 .item {
