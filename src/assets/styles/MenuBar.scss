@@ -1,0 +1,52 @@
+@import "./common";
+
+ul
+li {
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    padding-left: 0;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li{
+    padding: 0 50px;
+    float: left;
+    width:17%;
+    text-align: center;
+}
+
+nav {
+    z-index: 1;
+    padding: 10px;
+}
+ul {
+	list-style-type: none;
+    padding-left: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+nav{
+    background:#fff;
+    box-shadow:0 2px 8px rgba(30,30,80,.3);
+    left:0;
+    line-height:1;
+    position:fixed;
+    top:0;
+    height: 2%;
+    width:100%;
+    z-index:100;
+    text-align:center;
+}
+
+  
