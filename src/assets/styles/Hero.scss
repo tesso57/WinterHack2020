@@ -1,20 +1,36 @@
 @import "common";
 
-div.bigger{
+div.bigger {
   font-size: $fontsize-hero;
   font-weight: bold;
 }
 
-div.normal{
+div.normal {
   font-size: $fontsize-Display2;
   font-weight: bold;
 }
 
 .common {
+  font-family: $font-primary;
   color: $color-primary;
-  text-decoration: underline;
+  text-decoration: none;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.common:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  display: inline-block;
+  width: 110%;
+  height: 8px;
+  transform: translateX(-50%);
+  background-color: $color-primary;
+  border-radius: 2px;
 }
 

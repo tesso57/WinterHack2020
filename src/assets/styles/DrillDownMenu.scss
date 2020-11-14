@@ -4,6 +4,8 @@
   background: $color-secondary;
   color: $color-font-white;
   font-size: $fontsize-Display1;
+  font-weight: 700;
+  font-family: $font-primary;
   text-align: center;
 
   width: 70%;
@@ -34,7 +36,6 @@
 .content {
   display: block;
   position: relative;
-  font-weight: bold;
   background: $color-secondary2;
 
   width: 70%;
@@ -47,10 +48,14 @@
   padding-bottom: 80px;
 
   user-select: none;
+
+  font-family: $font-primary;
+  font-weight: 900;
 }
 
 .item {
-  font-weight: normal;
+  font-weight: 600;
+  font-family: $font-normal;
   font-size: $fontsize-Heading;
   color: $color-font;
   background: $color-background;
