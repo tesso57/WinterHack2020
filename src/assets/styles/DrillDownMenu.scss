@@ -1,7 +1,6 @@
 @import "common";
 
 .heading {
-
   background: $color-primary;
   color: $color-font-white;
   font-size: $fontsize-Display2;
@@ -58,5 +57,15 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+}
 
+.bar {
+  position: absolute;
+  width: 20px;
+  height: 450px;
+  background: #000;
+  top: 50px;
+  left: 50%;
+  transform:translateX(-300%);
+  z-index: -1;
 }

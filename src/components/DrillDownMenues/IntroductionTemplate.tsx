@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import "../../assets/styles/DrillDownMenu.scss"
 import RecallButton from "../RecallButton";
 import DrillDownMenuItem from "./DrillDownMenuItem";
+import Bar from "./Bar";
 
 
 type Props = {
@@ -32,6 +33,7 @@ const IntroductionTemplate = (props: Props) => {
             </div>
             {isOpen &&
             <div className={"content"}>
+                <Bar/>
                 <DrillDownMenuItem content={"名前"}/>
                 <DrillDownMenuItem content={"所属"}/>
                 <DrillDownMenuItem content={currentData[0]}/>
