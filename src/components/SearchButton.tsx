@@ -10,9 +10,7 @@ type Props = {
 const SearchButton = (props: Props) => {
     var url=encodeURI("https://www.google.com/search?q="+props.search);
     return(
-        <>
             <button className="SearchButton"><a href={url} target="_blank">{props.text}</a></button>
-        </>
     )
 }
 

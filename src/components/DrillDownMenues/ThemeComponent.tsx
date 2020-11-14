@@ -24,7 +24,7 @@ const ThemeComponent = (props: Props) => {
             <div className={"content"}>
                 <Text text={props.heading}/>
                 <SearchButton text={"検索"} search={props.heading}/>
-                <RecallButton/>
+                <RecallButton />
             </div>
             }
         </div>

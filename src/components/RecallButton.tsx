@@ -6,7 +6,7 @@ type Props = {
 
 const RecallButton = (props: Props) => {
     return(
-        <>
+        <div>
             <button className="RecallButton">
                 <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xmlSpace="preserve">
                 <g>
@@ -23,7 +23,7 @@ const RecallButton = (props: Props) => {
                 </g>
                 </svg>
             </button>
-        </>
+        </div>
     )
 }
 
