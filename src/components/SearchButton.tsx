@@ -1,4 +1,3 @@
-import {url} from "inspector";
 import React from "react";
 import "../assets/styles/SearchButton.scss"
 
@@ -8,7 +7,6 @@ type Props = {
 }
 
 const SearchButton = (props: Props) => {
-    //@typescript-eslint/no-unused-vars
     const url = encodeURI("https://www.google.com/search?q=" + props.search);
     return (
         <button className="SearchButton"><a href={url} target="_blank" rel="noreferrer">{props.text}</a></button>

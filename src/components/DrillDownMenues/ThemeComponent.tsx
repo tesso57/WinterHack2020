@@ -19,7 +19,7 @@ const ThemeComponent = (props: Props) => {
         if (props.data !== undefined) {
             setCurrentData(props.data[Math.floor(Math.random() * props.data.length)]['content'])
         }
-    }, [recall])
+    }, [recall,props.data])
 
     return (
         <div>

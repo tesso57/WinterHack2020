@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 import Hero from './components/Hero';
 import MenuBar from './components/MenuBar';
 import "./assets/styles/App.scss"
