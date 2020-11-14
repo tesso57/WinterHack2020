@@ -17,12 +17,13 @@ const ThemeComponent = (props: Props) => {
     const [recall, setRecall] = useState(false)
     useEffect(() => {
         if (props.data !== undefined) {
-            let preData = props.data[Math.floor(Math.random() * props.data.length)]['content']
-            while (preData === currentData) {
-                preData = props.data[Math.floor(Math.random() * props.data.length)]['content']
+            let nextData = props.data[Math.floor(Math.random() * props.data.length)]['content']
+            while (nextData === currentData) {
+                nextData = props.data[Math.floor(Math.random() * props.data.length)]['content']
             }
-            setCurrentData(preData)
+            setCurrentData(nextData)
         }
+        // eslint-disable-next-line
     }, [recall, props.data])
 
     return (

@@ -1,8 +1,6 @@
 import React from "react";
 import "../assets/styles/MenuBar.scss"
 import MenuItem from './MenuItem';
-import icon from '../assets/img/template_kun_2_circle.png'
-import MenuTitle from "./MenuTitle";
 
 const MenuBar = () => {
     return (
