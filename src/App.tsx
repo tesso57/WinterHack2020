@@ -2,12 +2,14 @@ import React from 'react';
 import Hero from './components/Hero';
 import RecallButton from './components/RecallButton';
 import MenuBar from './components/MenuBar';
-import "./assets/styles/App.scss"
+import Text from './components/Text';
 import SearchButton from './components/SearchButton';
+import "./assets/styles/App.scss"
 
 function App() {
   return (
     <>
+    <div className="window">
         <div className="space"></div>
         <Hero text={"タイトル"} bigger={true} />
         <div id="template">
@@ -22,6 +24,8 @@ function App() {
         <RecallButton/>
         <MenuBar/>
         <SearchButton search={"猫"} text={"具体例を検索!"}/>
+        <Text text={"話題"}/>
+    </div>
     </>
   );
 }

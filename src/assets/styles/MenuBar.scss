@@ -33,17 +33,18 @@ ul {
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-    margin-top: auto;
+    margin-top: 0;
 }
 
 nav{
+    padding: 0;
     background:#fff;
     box-shadow:0 2px 8px rgba(30,30,80,.3);
     left:0;
     line-height:1;
     position:fixed;
     top:0;
-    height: 2%;
+    height: 5%;
     width:100%;
     z-index:100;
     text-align:center;
