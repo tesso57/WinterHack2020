@@ -1,0 +1,24 @@
+@import "common";
+
+.SearchButton{
+    padding: 10px;
+    background-color: $color-background;
+    text-align: center;
+    border-color: $color-secondary;
+    border-width: thick;
+    border-style: solid;
+    border-radius: 20px/20px;
+    outline: none;
+    box-shadow: none;
+}
+a{
+    font-size: $fontsize-Display1;
+    font-weight: bold;
+    color: $color-font;
+    text-decoration: none;
+
+}
+.SearchButton:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
