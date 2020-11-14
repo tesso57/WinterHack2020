@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import Hero from './components/Hero';
 import MenuBar from './components/MenuBar';
 import "./assets/styles/App.scss"
@@ -8,7 +8,8 @@ import {db} from "./firebase"
 
 function App() {
     const [dataset, setDataset] = useState({});
-
+    const [isOpens, setIsOpens] = useState([false, false, true, true])
+    const [currentData, setCurrentData] = useState(["", "", "", ""])
     useEffect(() => {
         (async () => {
             const initDataset: { [key: string]: { content: string, type: string }[] } = {}
@@ -18,9 +19,25 @@ function App() {
                     initDataset[id] = doc.data() as { content: string, type: string }[];
                 })
             })
-            setDataset(initDataset)
+            setDataset(initDataset["data"])
+            setCurrentData([
+                getRandomData(initDataset['data']['introductions']),
+                getRandomData(initDataset['data']['introductions']),
+                getRandomData(initDataset['data']['topics']),
+                getRandomData(initDataset['data']['order'])
+            ])
         })()
     }, [])
+
+    const getRandomData = (data: { content: string, type: string }[]): string => {
+        return data[Math.floor(Math.random() * data.length)]['content']
+    }
+
+    const handleOpen = useCallback((num: number) => {
+        let opens = isOpens;
+        opens[num] = !opens[num]
+        setIsOpens(opens)
+    }, [setIsOpens])
 
     return (
         <>
@@ -33,11 +50,13 @@ function App() {
             </div>
             <div id="wadai">
                 <Hero text={"話題ガチャ"} bigger={true}/>
-                <ThemeComponent heading={"話題"} isInit={true}/>
+                <ThemeComponent heading={"話題"} isOpen={isOpens[2]} getRandomData={getRandomData}
+                                content={currentData[2]} setOpen={handleOpen} uid={2}/>
             </div>
             <div id="junban">
                 <Hero text={"順番決め"} bigger={true}/>
-                <ThemeComponent heading={"順番"} isInit={true}/>
+                <ThemeComponent heading={"話題"} isOpen={isOpens[3]} getRandomData={getRandomData}
+                                content={currentData[3]} setOpen={handleOpen} uid={3}/>
             </div>
             <MenuBar/>
         </>

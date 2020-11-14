@@ -1,13 +1,11 @@
 {
-  "introductionTemplate": {
+  "data": {
     "introductions": [
       {
         "content": "趣味",
         "type": "formal"
       }
-    ]
-  },
-  "order": {
+    ],
     "order": [
       {
         "content": "誕生日が早い人順",
@@ -45,9 +43,7 @@
         "content": "財布に現金を多く持っている人順",
         "type": "informal"
       }
-    ]
-  },
-  "topic": {
+    ],
     "topics": [
       {
         "content": "映画",

@@ -1,27 +1,30 @@
-import React, {useState} from "react";
+import React from "react";
 import "../../assets/styles/DrillDownMenu.scss"
 import Text from "../Text"
 import SearchButton from "../SearchButton";
 import RecallButton from "../RecallButton";
+
 type Props = {
     heading: string,
-    isInit: boolean,
+    content: string,
+    getRandomData: (data: { content: string, type: string }[]) => string,
+    isOpen: boolean,
+    setOpen: (num: number) => void,
+    uid : number
 }
 
 const ThemeComponent = (props: Props) => {
-    const [isOpen, setIsOpen] = useState(props.isInit);
-
 
     return (
         <div>
-            <div onClick={() => setIsOpen(!isOpen)} className={"heading"}>
+            <div className={"heading"} onClick={() => props.setOpen(props.uid)}>
                 {props.heading}
             </div>
-            {isOpen &&
+            {props.isOpen &&
             <div className={"content"}>
-                <Text text={props.heading}/>
+                <Text text={props.content}/>
                 <SearchButton text={"検索"} search={props.heading}/>
-                <RecallButton />
+                <RecallButton/>
             </div>
             }
         </div>
