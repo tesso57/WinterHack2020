@@ -1,11 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Hero from './components/Hero';
 import MenuBar from './components/MenuBar';
 import "./assets/styles/App.scss"
 import ThemeComponent from "./components/DrillDownMenues/ThemeComponent";
 import IntroductionTemplate from "./components/DrillDownMenues/IntroductionTemplate";
+import {db} from "./firebase"
 
 function App() {
+    const [dataset, setDataset] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const initDataset: { [key: string]: { content: string, type: string }[] } = {}
+            await db.collection(name).get().then(snapshots => {
+                snapshots.forEach(doc => {
+                    const id = doc.id
+                    initDataset[id] = doc.data() as { content: string, type: string }[]
+                })
+            })
+            setDataset(initDataset)
+        })()
+    }, [])
+
     return (
         <>
             <div className="space"/>
