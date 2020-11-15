@@ -6,6 +6,7 @@ import ThemeComponent from "./components/DrillDownMenues/ThemeComponent";
 import IntroductionTemplate from "./components/DrillDownMenues/IntroductionTemplate";
 import {db} from "./firebase"
 import template_kun from "./assets/img/template_kun.jpg"
+import template_kun_circle from "./assets/img/template_kun_2_circle.png"
 
 function App() {
     const [dataset, setDataset] = useState({});
@@ -66,6 +67,7 @@ function App() {
                             data={dataset['order']}
                         />
                     </div>
+                    <p className={"copyrights"}>© 2020 テンプレくん <img className={"icon-copyrights"} src={template_kun_circle} alt={"テンプレくん"}/></p>
                 </>
             )}
         </>

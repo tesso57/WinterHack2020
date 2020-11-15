@@ -21,3 +21,17 @@ body {
   text-align: center;
   background-image: url("../img/leaves.png");
 }
+
+.icon-copyrights{
+  width: 50px;
+  position: relative;
+  bottom:-14px;
+  margin-left: 20px;
+}
+
+.copyrights {
+  font-size: $fontsize-Title;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
