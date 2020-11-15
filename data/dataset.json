@@ -37,7 +37,7 @@
         "type": "formal"
       },
       {
-        "content": "誕生日が近い人順",
+        "content": "誕生日が今日から近い人順",
         "type": "formal"
       },
       {
@@ -45,23 +45,39 @@
         "type": "formal"
       },
       {
-        "content": "名前のアルファベット順",
+        "content": "名前(ローマ字)のアルファベット順",
         "type": "informal"
       },
       {
-        "content": "下の名前のアルファベット順",
+        "content": "下の名前(ローマ字)のアルファベット順",
         "type": "informal"
       },
       {
-        "content": "寝たのが早かった順",
+        "content": "昨日寝たのが早かった順",
         "type": "informal"
       },
       {
-        "content": "起きたのが早かった順",
+        "content": "今日起きたのが早かった順",
         "type": "informal"
       },
       {
         "content": "財布に現金を多く持っている人順",
+        "type": "informal"
+      },
+      {
+        "content": "誕生日が遅い人順",
+        "type": "informal"
+      },
+      {
+        "content": "今日起きたのが遅かった順",
+        "type": "informal"
+      },
+      {
+        "content": "昨日寝たのが遅かった人順",
+        "type": "informal"
+      },
+      {
+        "content": "誕生日が今日から遠い人順",
         "type": "informal"
       }
     ],
@@ -108,6 +124,12 @@
       },
       {
         "content": "スポーツ",
+        "type": "formal"
+      },{
+        "content": "バイト",
+        "type": "formal"
+      },{
+        "content": "サークル",
         "type": "formal"
       }
     ]
