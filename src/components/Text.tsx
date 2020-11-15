@@ -7,7 +7,7 @@ type Props = {
 
 const Text = (props: Props) => {
     return (
-        <div>{props.text}</div>
+        <div dangerouslySetInnerHTML={{__html: props.text}}/>
     )
 }
 
