@@ -31,12 +31,16 @@ const ThemeComponent = (props: Props) => {
             <div onClick={() => setIsOpen(!isOpen)} className={"heading"}>
                 {props.heading}
             </div>
-            {isOpen &&
-            <div className={"content"}>
-                <Text text={currentData}/>
-                <SearchButton text={"検索"} search={currentData}/>
-                <RecallButton handleRecall={() => setRecall(!recall)}/>
-            </div>
+            {(isOpen) ? (
+                <div className={"content open-content"}>
+                    <Text text={currentData}/>
+                    <SearchButton text={"検索"} search={currentData}/>
+                    <RecallButton handleRecall={() => setRecall(!recall)}/>
+                </div>
+            ) : (
+                <div className={"content close-content"}>
+                </div>
+            )
             }
         </div>
     )
