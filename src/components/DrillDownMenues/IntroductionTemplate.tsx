@@ -30,7 +30,6 @@ const IntroductionTemplate = (props: Props) => {
                     props.data[Math.floor(Math.random() * props.data.length)]['content']
                 ]
             }
-            console.log(preData)
             setCurrentData(preData)
         }
         // eslint-disable-next-line
