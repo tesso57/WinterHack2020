@@ -3,6 +3,7 @@ import "../../assets/styles/DrillDownMenu.scss"
 import Text from "../Text"
 import SearchButton from "../SearchButton";
 import RecallButton from "../RecallButton";
+import arrow from "../../assets/img/arrow.svg"
 
 type Props = {
     heading: string,
@@ -29,7 +30,19 @@ const ThemeComponent = (props: Props) => {
     return (
         <div>
             <div onClick={() => setIsOpen(!isOpen)} className={"heading"}>
-                {props.heading}
+                <ul>
+                    {(isOpen) ? (
+                        <li>
+                            <img className={"icon"} src={arrow} alt={"arrow"}/>
+                            {props.heading}
+                        </li>
+                    ) : (
+                        <li>
+                            <img className={"icon downArrow"} src={arrow} alt={"arrow"}/>
+                            {props.heading}
+                        </li>
+                    )}
+                </ul>
             </div>
             {(isOpen) ? (
                 <div className={"content open-content"}>

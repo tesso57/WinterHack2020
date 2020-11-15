@@ -52,6 +52,7 @@
   font-family: $font-primary;
   font-weight: 900;
 }
+
 .open-content {
   animation-name: openContent;
   animation-duration: 2.5s;
@@ -104,12 +105,28 @@
   background: #000;
   top: 50px;
   left: 47%;
-  transform:translateX(-300%);
+  transform: translateX(-300%);
   z-index: -1;
   //animation-name: fadeIn;
   //animation-duration: 1s;
   //animation-fill-mode: forwards;
   //animation-timing-function: ease-in;
+}
+
+.icon {
+  width: 50px;
+  position: absolute;
+  left: 10px;
+}
+
+.downArrow {
+  -webkit-transform: rotate(0.5turn);
+  transform: rotate(0.5turn);
+}
+
+li {
+  list-style: none;
+  position: relative;
 }
 
 @keyframes openContent {
@@ -143,3 +160,4 @@
     opacity: 100%;
   }
 }
+
