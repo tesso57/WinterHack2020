@@ -3,6 +3,7 @@ import "../../assets/styles/DrillDownMenu.scss"
 import RecallButton from "../RecallButton";
 import DrillDownMenuItem from "./DrillDownMenuItem";
 import Bar from "./Bar";
+import arrow from "../../assets/img/arrow.svg";
 
 
 type Props = {
@@ -38,7 +39,19 @@ const IntroductionTemplate = (props: Props) => {
     return (
         <div>
             <div onClick={() => setIsOpen(!isOpen)} className={"heading"}>
-                {props.heading}
+                <ul>
+                    {(isOpen) ? (
+                        <li>
+                            <img className={"icon"} src={arrow} alt={"arrow"}/>
+                            {props.heading}
+                        </li>
+                    ) : (
+                        <li>
+                            <img className={"icon downArrow"} src={arrow} alt={"arrow"}/>
+                            {props.heading}
+                        </li>
+                    )}
+                </ul>
             </div>
             {isOpen ? (
                 <div className={"content open-content"}>
