@@ -10,6 +10,21 @@
       },{
         "content": "休日のすごし方",
         "type": "formal"
+      },{
+        "content": "好きな俳優",
+        "type": "informal"
+      },{
+        "content": "好きな女優",
+        "type": "informal"
+      },{
+        "content": "好きな映画",
+        "type": "informal"
+      },{
+        "content": "好きな場所",
+        "type": "formal"
+      },{
+        "content": "好きな漫画",
+        "type": "informal"
       }
     ],
     "order": [
@@ -42,7 +57,7 @@
         "type": "informal"
       },
       {
-        "content": "おきたのが早かった順",
+        "content": "起きたのが早かった順",
         "type": "informal"
       },
       {

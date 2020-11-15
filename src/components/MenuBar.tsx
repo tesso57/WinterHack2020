@@ -17,7 +17,6 @@ const MenuBar = () => {
     });
 
     let style = onTop ? 'onTopNav' : ''
-    console.log(style)
     return (
             <div className={"navCommon " + style}>
                 <MenuItem url={"#template"} text={"自己紹介テンプレート"}/>
