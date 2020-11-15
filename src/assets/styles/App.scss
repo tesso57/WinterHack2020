@@ -19,7 +19,7 @@ body {
   text-decoration: none;
   font-size: $fontsize-hero;
   text-align: center;
-  background-image: url("../img/leaves.png");
+  background-image: $background-image;
 }
 
 .icon-copyrights{
