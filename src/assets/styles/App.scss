@@ -1,19 +1,22 @@
 @import "common";
 
 .img {
-    width: 50%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 30px/30px;
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 30px/30px;
 }
 
 .last {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 
 body {
-    color: $color-font;
-    text-decoration: none;
-    font-size: $fontsize-hero;
-    text-align: center;
+  zoom: 80%;
+  -moz-transform: scale(0.8);
+  -moz-transform-Origin: 0 0;
+  color: $color-font;
+  text-decoration: none;
+  font-size: $fontsize-hero;
+  text-align: center;
 }
