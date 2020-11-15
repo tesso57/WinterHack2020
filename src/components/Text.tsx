@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/Text.scss"
+// import "../assets/styles/Text.scss"
 
 type Props = {
     text: string
@@ -7,7 +7,7 @@ type Props = {
 
 const Text = (props: Props) => {
     return (
-        <div className={"Text"}>{props.text}</div>
+        <div>{props.text}</div>
     )
 }
 
