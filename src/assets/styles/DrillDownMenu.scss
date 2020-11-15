@@ -90,9 +90,9 @@
   margin-right: auto;
   margin-bottom: 50px;
 
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-timing-function: ease;
+  //animation-name: fadeIn;
+  //animation-duration: 1s;
+  //animation-timing-function: ease;
 }
 
 .bar {
@@ -104,9 +104,10 @@
   left: 47%;
   transform:translateX(-300%);
   z-index: -1;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
+  //animation-name: fadeIn;
+  //animation-duration: 1s;
+  //animation-fill-mode: forwards;
+  //animation-timing-function: ease-in;
 }
 
 @keyframes openContent {

@@ -11,9 +11,6 @@
     outline: none;
     box-shadow: none;
     margin-top: 30px;
-
-    animation-name: fadeIn;
-    animation-duration: 1s;
 }
 a{
     font-size: $fontsize-Display1;
@@ -25,14 +22,4 @@ a{
 .SearchButton:hover{
     cursor: pointer;
     opacity: 0.7;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100%;
-    }
 }
