@@ -40,16 +40,22 @@ const IntroductionTemplate = (props: Props) => {
             <div onClick={() => setIsOpen(!isOpen)} className={"heading"}>
                 {props.heading}
             </div>
-            {isOpen &&
-            <div className={"content"}>
-                <Bar/>
-                <DrillDownMenuItem content={"名前"}/>
-                <DrillDownMenuItem content={"所属"}/>
-                <DrillDownMenuItem content={currentData[0]}/>
-                <DrillDownMenuItem content={currentData[1]}/>
-                <DrillDownMenuItem content={"よろしくお願いします"}/>
-                <RecallButton handleRecall={() => setRecall(!recall)}/>
-            </div>
+            {isOpen ? (
+                <div className={"content open-content"}>
+                    <Bar/>
+                    <DrillDownMenuItem content={"名前"}/>
+                    <DrillDownMenuItem content={"所属"}/>
+                    <DrillDownMenuItem content={currentData[0]}/>
+                    <DrillDownMenuItem content={currentData[1]}/>
+                    <DrillDownMenuItem content={"よろしくお願いします"}/>
+                    <RecallButton handleRecall={() => setRecall(!recall)}/>
+                </div>
+            ) : (
+                <div className={"content close-introduction"}>
+
+                </div>
+            )
+
             }
         </div>
     )

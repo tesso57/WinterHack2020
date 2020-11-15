@@ -6,10 +6,8 @@ type Props = {
 }
 
 const Text = (props: Props) => {
-    return(
-        <>
-            <div>{props.text}</div>
-        </>
+    return (
+        <div className={"Text"}>{props.text}</div>
     )
 }
 
