@@ -1,29 +1,28 @@
 @import "./common";
 
-ul {
-  list-style-type: none;
+
+.onTopNav {
+  box-shadow: 0 2px 8px rgba(30, 30, 80, .3);
+  line-height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.navCommon {
+
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-around;
   justify-content: space-around;
   margin: 0;
   padding: 0;
-}
-
-nav {
-  padding: 0;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(30, 30, 80, .3);
-  line-height: 70px;
-  position: fixed;
-  top: 0;
-  height: 70px;
-  width: 100%;
-  min-width: 870px;
-  z-index: 100;
-  text-align: center;
 
   font-family: $font-primary;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  min-width: 870px;
 }
 
 
@@ -39,3 +38,4 @@ nav {
   color: $color-primary;
   height: 60px;
 }
+

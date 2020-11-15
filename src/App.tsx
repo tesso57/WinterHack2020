@@ -31,7 +31,6 @@ function App() {
     return (
         <>
             <div className="space"/>
-            <MenuBar/>
             {(Object.keys(dataset).length === 0) ? (
                 <>
                     <h2>Now Loading...</h2>
@@ -40,6 +39,7 @@ function App() {
             ) : (
                 <>
                     <Hero text={"テンプレくん"} bigger={true}/>
+                    <MenuBar/>
                     <div id="template">
                         <Hero text={"自己紹介テンプレート"} bigger={false}/>
                         <IntroductionTemplate

@@ -7,10 +7,8 @@ type Props = {
 }
 
 const MenuItem = (props: Props) => {
-    return(
-        <>
-            <a className="MenuItem" href={props.url}>{props.text}</a>
-        </>
+    return (
+        <a className="MenuItem" href={props.url}>{props.text}</a>
     )
 }
 
